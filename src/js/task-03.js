@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imagesContainerEl = document.querySelector('.gallery');
+console.log(imagesContainerEl);
+
+const imagesTransactionMarkup = ({url, alt}) => {
+  return `
+  <li>
+  <img src="${url}" alt="${alt}" class = "gallery__image">
+  </li>`
+}
+
+const makeTransactionImages = images.map(imagesTransactionMarkup).join('');
+console.log(makeTransactionImages)
+
+imagesContainerEl.insertAdjacentHTML("afterbegin", makeTransactionImages);
