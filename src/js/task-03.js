@@ -19,7 +19,7 @@ console.log(imagesContainerEl);
 const imagesTransactionMarkup = ({url, alt}) => {
   return `
   <li>
-  <img src="${url}" alt="${alt}" width = 550>
+  <img src="${url}" alt="${alt}">
   </li>`
 }
 
@@ -33,3 +33,7 @@ imagesContainerEl.style.listStyle = "none";
 imagesContainerEl.style.flexWrap = "wrap";
 imagesContainerEl.style.gap = "50px";
 
+const allEl = imagesContainerEl.querySelectorAll('img').forEach(element => {
+  element.style.width = "550px";
+
+})
