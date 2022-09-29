@@ -19,7 +19,7 @@ console.log(imagesContainerEl);
 const imagesTransactionMarkup = ({url, alt}) => {
   return `
   <li>
-  <img src="${url}" alt="${alt}" class = "gallery__image">
+  <img src="${url}" alt="${alt}" width = 550>
   </li>`
 }
 
@@ -27,3 +27,9 @@ const makeTransactionImages = images.map(imagesTransactionMarkup).join('');
 console.log(makeTransactionImages)
 
 imagesContainerEl.insertAdjacentHTML("afterbegin", makeTransactionImages);
+
+imagesContainerEl.style.display = "flex";
+imagesContainerEl.style.listStyle = "none";
+imagesContainerEl.style.flexWrap = "wrap";
+imagesContainerEl.style.gap = "50px";
+
