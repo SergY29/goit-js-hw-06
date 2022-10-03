@@ -3,8 +3,17 @@ const btnDestroyRef = document.querySelector('[data-destroy]');
 const inputAmountRef = document.querySelector('#controls input');
 const createDivRef = document.querySelector('#boxes');
 
+btnCreateRef.addEventListener('click', createBoxes);
+btnDestroyRef.addEventListener('click', destroyBoxes);
 
+function createBoxes(amount) {
+  document.createElement("h1");
+  ;
+}
 
+function destroyBoxes(amount) {
+  createDivRef.innerHTML = '';
+}
 
 
 function getRandomHexColor() {
