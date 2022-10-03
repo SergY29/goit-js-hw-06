@@ -7,7 +7,7 @@ btnCreateRef.addEventListener('click', createBoxes);
 btnDestroyRef.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
-  document.createElement("h1");
+  document.createElement("div");
   ;
 }
 
