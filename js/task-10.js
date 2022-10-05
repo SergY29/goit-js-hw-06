@@ -5,20 +5,23 @@ const createDivRef = document.querySelector('#boxes');
 
 btnCreateRef.addEventListener('click', createBoxes);
 btnDestroyRef.addEventListener('click', destroyBoxes);
+let amount = 0;
+inputAmountRef.addEventListener('click', (e) => (amount = e.target.value));
 
 function createBoxes() {
-  let amount = inputAmountRef.value;
+  const boxArray = [];
   for (let i = 0; i < amount; i += 1) {
     let size = 30 + i * 10;
     const div = document.createElement("div");
     const hexColor = getRandomHexColor();
-    createDivRef.append(div);
     div.style.backgroundColor = hexColor;
     div.style.width += `${size}px`;
     div.style.height += `${size}px`;
     div.classList.add("new-div");
     div.textContent = 'div';
+    boxArray.push(div);
   }
+  createDivRef.append(...boxArray);
   inputAmountRef.value = '';
 }
 
