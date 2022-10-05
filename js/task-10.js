@@ -15,8 +15,8 @@ function createBoxes() {
     const div = document.createElement("div");
     const hexColor = getRandomHexColor();
     div.style.backgroundColor = hexColor;
-    div.style.width += `${size}px`;
-    div.style.height += `${size}px`;
+    div.style.width = `${size}px`;
+    div.style.height = `${size}px`;
     div.classList.add("new-div");
     div.textContent = 'div';
     boxArray.push(div);
